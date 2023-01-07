@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const URL = "http://localhost:3000/"
+const URL = "http://localhost:8000"
 
 export const getNews = async ()=>{
     
     try{
-        return await axios.get(URL);
+        return await axios.get(`${URL}/news`);
     }catch(error){
         console.log('Error whhile causing getNews Api',error);
     }
