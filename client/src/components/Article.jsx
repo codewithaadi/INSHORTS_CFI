@@ -55,7 +55,7 @@ const Publisher= styled(Typography)`
 export default function Article(props) {
   return (
     <Component>
-        <CardContent>
+        <Container>
             <Grid container>
                 <Grid lg={5} sm={5} xs={12} item>
                     <Image src={props.data.url}/>
@@ -70,11 +70,11 @@ export default function Article(props) {
                     </Description>
                     <Publisher>
                         read more at &nbsp;
-                        <a style={{textDecoration : 'none', color: "#000"}} href={props.data.link} target="_blank" ><b>{props.data.publisher}</b></a>
+                        <a style={{textDecoration : 'none', color: "#000"}} href={props.data.link} target="_blank" rel='noreferrer'><b>{props.data.publisher}</b></a>
                     </Publisher>
                 </RightContainer>
             </Grid>
-        </CardContent>
+        </Container>
     </Component>
   )
 }
